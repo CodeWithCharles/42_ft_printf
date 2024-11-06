@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/06 15:48:19 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:36:39 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,21 @@ typedef int	(*t_spec_printer)(va_list *, t_format *);
 
 // Define flag checking functions
 
-int	format_flag_has_left_justify(t_format *fmt);
-int	format_flag_has_forge_sign(t_format *fmt);
-int	format_flag_has_align_sign(t_format *fmt);
-int	format_flag_has_hex_prefix(t_format *fmt);
-int	format_flag_has_zero_padding(t_format *fmt);
-int	format_flag_has_precision(t_format *fmt);
+int		format_flag_has_left_justify(t_format *fmt);
+int		format_flag_has_forge_sign(t_format *fmt);
+int		format_flag_has_align_sign(t_format *fmt);
+int		format_flag_has_hex_prefix(t_format *fmt);
+int		format_flag_has_zero_padding(t_format *fmt);
+int		format_flag_has_precision(t_format *fmt);
 
 // Define printer functions
 
-int	_char_printer(va_list *list, t_format *fmt);
+int		_char_printer(va_list *list, t_format *fmt);
+
+// Utils functions
+
+void	putnchar(char c, int count);
+int		max(int a, int b);
+int		min(int a, int b);
 
 #endif
