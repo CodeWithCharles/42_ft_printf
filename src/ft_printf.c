@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:55:25 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/06 15:47:41 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:43:47 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,21 @@ int	ft_printf(const	char *format_in, ...)
 	int				printed_char;
 	t_spec_printer	printers[8];
 
+	printed_char = 0;
+	va_start(args, format_in);
+	init_printers(printers);
+	while (*format_in)
+	{
+		if (*format_in++ != '%')
+		{
+			++length;
+			ft_putchar_fd(fmt[-1], 1);
+			continue ;
+		}
+		length += handle(&fmt, &args, printers);
+	}
+	va_end(args);
+	return (length);
 }
 
 // Static implementations
