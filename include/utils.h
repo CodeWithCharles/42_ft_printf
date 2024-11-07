@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:52:11 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:56:05 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@
 // Define the hexadecimal charset
 
 # define HEX_CHARSET "0123456789abcdef0x"
+
+// Define the null string
+
+# define NULL_STRING "(null)"
 
 typedef struct s_format
 {
