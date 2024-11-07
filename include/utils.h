@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 16:22:42 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:10:55 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@
 
 # define FMT_SPECIFIERS "cspdiuxX%"
 # define FMT_FLAGS "-+ #0"
+
+// Define the hexadecimal charset
+
+# define HEX_CHARSET "0123456789abcdef0x"
 
 typedef struct s_format
 {
@@ -54,6 +58,8 @@ int		format_flag_has_precision(t_format *fmt);
 // Define printer functions
 
 int		_char_printer(va_list *arg_list, t_format *fmt);
+
+int		hex_printer(t_format *fmt, size_t n, int is_up);
 
 // Utils functions
 
