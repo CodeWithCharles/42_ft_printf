@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/06 16:36:39 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:22:42 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		format_flag_has_precision(t_format *fmt);
 
 // Define printer functions
 
-int		_char_printer(va_list *list, t_format *fmt);
+int		_char_printer(va_list *arg_list, t_format *fmt);
 
 // Utils functions
 

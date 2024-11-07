@@ -6,7 +6,7 @@
 #    By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/06 15:12:50 by cpoulain          #+#    #+#              #
-#    Updated: 2024/11/06 15:37:44 by cpoulain         ###   ########.fr        #
+#    Updated: 2024/11/07 16:28:54 by cpoulain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,10 @@ $(NAME): $(LIBFT) $(OBJS)
 	@cp $(LIBFT) $@
 	@sh -c "ar rcs $@ $(OBJS) || rm $@"
 
+tests: $(LIBFT) $(OBJS)
+	@cp $(LIBFT) $(NAME)
+	@sh -c "$(CC) $(OBJS) $(CFLAGS) $(NAME) test.c -o ft_printf || rm $(NAME)"
+
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
 	$(CC) -c $< -o $@ -I$(INC_DIR) -I$(LIBFT_INC_DIR) $(CFLAGS)
@@ -51,4 +55,4 @@ fclean: clean
 
 re: fclean all
 
-
+.PHONY: all bonus tests clean fclean re
