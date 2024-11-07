@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:14:48 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:21:12 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ int		format_flag_has_precision(t_format *fmt);
 // Define printer functions
 
 int		_char_printer(va_list *arg_list, t_format *fmt);
+int		_lo_hex_printer(va_list *arg_list, t_format *fmt);
+int		_up_hex_printer(va_list *arg_list, t_format *fmt);
 
 int		hex_printer(t_format *fmt, size_t n, int is_up);
 
