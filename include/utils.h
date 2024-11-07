@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:10:55 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:14:48 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int		hex_printer(t_format *fmt, size_t n, int is_up);
 void	putnchar(char c, int count);
 int		max(int a, int b);
 int		min(int a, int b);
+char	*str_toupper(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:34:58 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:09:38 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:14:31 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static void	print(t_format *fmt, size_t n, int pn, int is_up)
 
 	charset = HEX_CHARSET;
 	if (is_up)
-		charset = ft_toupper(HEX_CHARSET);
+		charset = str_toupper(HEX_CHARSET);
 	if (!format_flag_has_left_justify(fmt))
 		putnchar(' ', fmt->width);
 	if (format_flag_has_hex_prefix(fmt)
