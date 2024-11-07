@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:44:36 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:52:11 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int		_unsigned_printer(va_list *arg_list, t_format *fmt);
 
 int		number_printer(t_format *fmt, long n);
 int		hex_printer(t_format *fmt, size_t n, int is_up);
+int		string_printer(t_format *fmt, char *str);
 
 // Utils functions
 
