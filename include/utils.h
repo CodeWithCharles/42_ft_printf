@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:58:33 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:56:05 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:33:28 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@
 
 // Define the hexadecimal charset
 
-# define HEX_CHARSET "0123456789abcdef0x"
+# define L_HEX_CHARSET "0123456789abcdef0x"
+# define U_HEX_CHARSET "0123456789ABCDEF0X"
 
 // Define the null string
 
@@ -62,6 +63,8 @@ int		format_flag_has_precision(t_format *fmt);
 // Define printer functions
 
 int		_char_printer(va_list *arg_list, t_format *fmt);
+int		_string_printer(va_list *arg_list, t_format *fmt);
+int		_pointer_printer(va_list *arg_list, t_format *fmt);
 int		_lo_hex_printer(va_list *arg_list, t_format *fmt);
 int		_up_hex_printer(va_list *arg_list, t_format *fmt);
 int		_integer_printer(va_list *arg_list, t_format *fmt);
@@ -77,6 +80,5 @@ int		string_printer(t_format *fmt, char *str);
 void	putnchar(char c, int count);
 int		max(int a, int b);
 int		min(int a, int b);
-char	*str_toupper(char *str);
 
 #endif

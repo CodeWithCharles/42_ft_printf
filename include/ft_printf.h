@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:56:57 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 16:26:25 by cpoulain         ###   ########.fr       */
+/*   Created: 2024/11/07 16:01:21 by cpoulain          #+#    #+#             */
+/*   Updated: 2024/11/08 13:24:20 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/printf.h"
-#include <assert.h>
-#include <unistd.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	main(void)
-{
-	ft_printf("%c\n%c\n%c", 'o', 'k', 'a') == 5 ? write(1, "OK", 2) : write(1, "NOK", 3);
-}
+int	ft_printf(const char *fmt, ...);
+
+#endif

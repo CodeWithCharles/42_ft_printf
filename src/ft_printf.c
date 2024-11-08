@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:55:25 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/11/07 17:45:40 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:59:18 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	ft_printf(const	char *format_in, ...)
 static void	init_printers(t_spec_printer *printers)
 {
 	printers[0] = _char_printer;
+	printers[1] = _string_printer;
+	printers[2] = _pointer_printer;
 	printers[3] = _decimal_printer;
 	printers[4] = _integer_printer;
 	printers[5] = _unsigned_printer;
