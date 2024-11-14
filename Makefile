@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+         #
+#    By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/06 15:12:50 by cpoulain          #+#    #+#              #
-#    Updated: 2024/11/07 16:28:54 by cpoulain         ###   ########.fr        #
+#    Updated: 2024/11/14 17:06:29 by cpoulain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,15 @@ OBJ_DIR			= build
 
 NAME			= libftprintf.a
 
-include Files.mk
+FILES	=																	\
+	flags/format_flag_has_align_sign flags/format_flag_has_force_sign		\
+	flags/format_flag_has_hex_prefix flags/format_flag_has_left_justify		\
+	flags/format_flag_has_precision flags/format_flag_has_zero_padding		\
+	ft_printf hex_printer number_printer printers/char_printer				\
+	printers/decimal_printer printers/integer_printer						\
+	printers/lo_hex_printer printers/pointer_printer						\
+	printers/string_printer printers/unsigned_printer						\
+	printers/up_hex_printer string_printer utils
 
 SRCS			= $(addsuffix .c,$(addprefix $(SRC_DIR)/,$(FILES)))
 OBJS			= $(addsuffix .o,$(addprefix $(OBJ_DIR)/,$(FILES)))
@@ -48,9 +56,11 @@ $(LIBFT):
 	$(MAKE) -C $(LIBFT_PATH)
 
 clean:
+	$(MAKE) clean -C $(LIBFT_PATH)
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
+	$(MAKE) fclean -C $(LIBFT_PATH)
 	rm -f $(NAME)
 
 re: fclean all
